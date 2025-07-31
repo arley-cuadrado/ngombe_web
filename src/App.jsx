@@ -13,7 +13,6 @@ function App() {
       <section className='justify-content'>
         <main className='container'>
           <Course />
-
         </main>
       </section>
     </>
