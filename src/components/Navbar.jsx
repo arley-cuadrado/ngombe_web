@@ -1,4 +1,4 @@
-import ThemeController from './/Theme-controller'
+import ThemeController from './ThemeController'
 
 export default function Navbar(){
     return(

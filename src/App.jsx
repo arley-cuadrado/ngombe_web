@@ -2,7 +2,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Breadcrumbs from './components/Breadcrumbs'
-import Course from './components/Course'
+import Course from './components/CoursesGrid'
 import './index.css'
 
 function App() {
