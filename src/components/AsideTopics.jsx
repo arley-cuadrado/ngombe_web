@@ -1,9 +1,9 @@
 export default function AsideTopics(){
     return(
         <>
-            <div className="card bg-base-100 w-75">
+            <div className="card bg-base-100 mb-3 ms:w-auto md:w-75 mr-2">
                 <div className="card-body">
-                    <h2 className="card-title">
+                    <h2 className="card-title text-xs md:text-base lg:text-base">
                         Recommended topics
                     </h2>
                     <div className="card-actions justify-start">

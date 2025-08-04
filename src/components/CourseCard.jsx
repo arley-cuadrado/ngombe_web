@@ -1,5 +1,5 @@
 export default function CourseCard({course}){
-    
+
     const handleError = (e) => {
         e.target.src = "images/ng-default.jpg"
     }

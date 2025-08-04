@@ -2,7 +2,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Breadcrumbs from './components/Breadcrumbs'
-import Course from './components/CoursesGrid'
+import CoursesGrid from './components/CoursesGrid'
 import './index.css'
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <section className='justify-content'>
-        <main className='container'>
-          <Course />
+      <section className='flex flex-col items-center justify-center gap-2 md:flex-row'>
+        <main>{/* className='container' */}
+          <CoursesGrid />
         </main>
       </section>
     </>
