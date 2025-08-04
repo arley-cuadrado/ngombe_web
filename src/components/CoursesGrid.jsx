@@ -7,11 +7,6 @@ import CourseCard from './CourseCard'
 
 export default function CoursesGrid(){
 
-    {/*const vhStyle = {
-      height: '88vh', 
-      justifyContent: 'space-between'
-    };*/}
-
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
@@ -23,8 +18,8 @@ export default function CoursesGrid(){
     }, [])
 
     return(
-        <section className='flex flex-col justify-center gap-2 md:flex-row'>
-            <section className='flex flex-col'> {/* style={vhStyle} */}
+        <main className='flex flex-col justify-center gap-2 md:flex-row'>
+            <section className='flex flex-col'> 
             {/* <div className="p-4 pb-2 text-xs opacity-60 tracking-wide">The best course so far...</div>*/}
             <article className='order-first md:order-first md:h-screen'>
                 <ul className="list mr-0 md:mr-15 lg:mr-30 mt-2">
@@ -45,6 +40,6 @@ export default function CoursesGrid(){
                 <AsideTopics />
             </aside>
             <section className='block md:hidden'><Footer /></section>
-        </section>
+        </main>
     )
 }
