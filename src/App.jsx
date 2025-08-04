@@ -1,22 +1,21 @@
-
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import Breadcrumbs from './components/Breadcrumbs'
-import CoursesGrid from './components/CoursesGrid'
 import './index.css'
-
 
 function App() {
 
+  const [courses, setCourses] = useState([]);
+
+      useEffect(() => {
+          fetch("../../public/courses.json")
+          .then(response => response.json())
+          .then(data => setCourses(data))
+      }, [])
+
   return (
     <div>
-      <Navbar />
-      {/*}
-      <section className='flex flex-col items-center justify-center gap-2 md:flex-row'>
-        <main>
-        </main>
-      </section>
-      */}
+      <Navbar courses={courses}/>
     </div>
   )
 }

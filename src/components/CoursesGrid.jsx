@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from 'react'
 import Aside from  './Aside'
 import AsideTopics from './AsideTopics'
 import AsideVideo from './AsideVideo'
 import Footer from './Footer'
 import CourseCard from './CourseCard'
 
-export default function CoursesGrid(){
-
-    const [courses, setCourses] = useState([]);
-
-    useEffect(() => {
-
-        fetch("../../public/courses.json")
-        .then(response => response.json())
-        .then(data => setCourses(data))
-
-    }, [])
-
+export default function CoursesGrid({courses}){
     return(
         <main className='flex flex-col justify-center gap-2 md:flex-row'>
             <section className='flex flex-col'> 
@@ -30,7 +18,7 @@ export default function CoursesGrid(){
                     }
                 </ul>
             </article>
-            <section className='hidden md:block'><Footer /></section>{/*fixed bottom-0 */}
+            <section className='hidden md:block'><Footer /></section>
             </section>
             <aside className='flex flex-col items-center p-2'>
                 <section className='flex sm:flex-row md:flex-col lg:flex-col'>
